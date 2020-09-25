@@ -35,20 +35,21 @@ function createPost(post){
 
 // Async Await
 
-async function init(){
-  await createPost({title: '2ndcodes', body: 'Geek Oiza2'})
-  getPosts();
-}
-
-init();
-
-// async function fetchUsers(){
-
-//   const data = fetch('https://jsonplaceholder.typicode.com/users');
-  
-
+// async function init(){
+//   await createPost({title: '2ndcodes', body: 'Geek Oiza2'})
+//   getPosts();
 // }
 
+// init();
+
+// Async Await Fetch 
+async function fetchUsers(){
+
+  const res = await fetch('https://jsonplaceholder.typicode.com/users')
+  const data = await res.json()
+console.log(data);
+}
+fetchUsers();
 
 
 
